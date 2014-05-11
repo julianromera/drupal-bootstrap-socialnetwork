@@ -30,31 +30,31 @@
  * @see hook_commons_entity_integration_alter()
  */
 function hook_commons_entity_integration() {
-  // Register three of the webform entity's bundles for various integrations.
-  return array(
-    'webform' => array(
-      'test' => array(
-        'exclude_rate' => TRUE,
-        'is_group_content' => FALSE,
-      ),
-      'survey' => array(
-        'is_group_content' => TRUE,
-        'exclude_topics' => TRUE,
-      ),
-      'suggestion' => array(
-        'media' => TRUE,
-        'is_group_content' => TRUE,
-        'exclude_commons_follow' => TRUE,
-      ),
-    ),
-    'node' => array(
-      'group' => array(
-        'is_group_content' => FALSE,
-        'is_group' => TRUE,
-        'exclude_commons_follow' => TRUE,
-      ),
-    ),
-  );
+    // Register three of the webform entity's bundles for various integrations.
+    return array(
+        'webform' => array(
+            'test' => array(
+                'exclude_rate' => TRUE,
+                'is_group_content' => FALSE,
+            ),
+            'survey' => array(
+                'is_group_content' => TRUE,
+                'exclude_topics' => TRUE,
+            ),
+            'suggestion' => array(
+                'media' => TRUE,
+                'is_group_content' => TRUE,
+                'exclude_commons_follow' => TRUE,
+            ),
+        ),
+        'node' => array(
+            'group' => array(
+                'is_group_content' => FALSE,
+                'is_group' => TRUE,
+                'exclude_commons_follow' => TRUE,
+            ),
+        ),
+    );
 }
 
 /**
@@ -70,8 +70,8 @@ function hook_commons_entity_integration() {
  * @see hook_commons_entity_integration()
  */
 function hook_commons_entity_integration_alter(&$integrations) {
-  // Disable Media integration for the post content type.
-  $integrations['node']['post']['media'] = FALSE;
+    // Disable Media integration for the post content type.
+    $integrations['node']['post']['media'] = FALSE;
 }
 
 /**
