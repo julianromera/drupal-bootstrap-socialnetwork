@@ -6,6 +6,7 @@ if [ "x$1" = "x" ];then
         exit 0
 fi
 
-sudo git add .
-sudo git commit -a -m "$1"
-sudo git pull && sudo git push origin --all
+git add .
+git commit -am "$1"
+git pull origin master
+git push origin --all
