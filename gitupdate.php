@@ -1,1 +1,1 @@
-<?php `git pull origin master`;?>
+<?php $res=`git pull origin master`;echo $res;?>
